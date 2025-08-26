@@ -7,10 +7,12 @@ pipeline {
 
    stages {
        stage('Clone') {
-           steps {
-               git 'https://github.com/saisai18018/Maven.git'
-           }
-       }
+            steps {
+                echo 'Cloning repository...'
+                git branch: 'main', url: 'https://github.com/saisai18018/Maven.git'
+            }
+        }
+
        stage('Build') {
            steps {
                echo 'Building the project...'
