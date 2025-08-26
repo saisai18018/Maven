@@ -18,4 +18,6 @@ public class Calculator {
         if (b == 0) throw new IllegalArgumentException("Division by zero not allowed");
         return a / b;
     }
+
+    System.out.println("Calculator is enabled");
 }
