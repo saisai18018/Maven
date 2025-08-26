@@ -8,7 +8,7 @@ pipeline {
    stages {
        stage('Clone') {
            steps {
-               git 'https://github.com/your-username/mavenproject.git'
+               git 'https://github.com/saisai18018/Maven.git'
            }
        }
        stage('Build') {
