@@ -19,12 +19,14 @@ pipeline {
                bat 'mvn clean install'
            }
        }
-       stage('Test') {
-           steps {
-               echo 'Running tests...'
-               bat 'mvn test'
-           }
-       }
+      stage('Test') {
+            steps {
+                echo 'Running tests...'
+                bat 'mvn test'
+                junit '**/target/surefire-reports/*.xml'  // publish JUnit results
+            }
+        }
+
        stage('Run App') {
            steps {
                echo 'Running the Java App...'
